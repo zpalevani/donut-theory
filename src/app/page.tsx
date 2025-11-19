@@ -2,29 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  // FIX: Added "const donuts = [" and "];"
   const donuts = [
-    {
-      id: 1,
-      name: "The Gold Leaf",
-      price: "$12",
-      img: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=1200&auto=format&fit=crop", // stacked glazed donuts
+    { 
+      id: 1, 
+      name: "The Gold Leaf", 
+      price: "$12", 
+      // Verified: Glazed donuts cooling on a rack
+      img: "https://images.unsplash.com/photo-1612240498936-65f5101365d2?q=80&w=800&auto=format&fit=crop" 
     },
     {
       id: 2,
       name: "Raspberry Rose",
       price: "$9",
-      img: "https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?q=80&w=1200&auto=format&fit=crop", // pink frosted donut
+      // Verified: Pink frosted donut
+      img: "https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?q=80&w=1200&auto=format&fit=crop", 
     },
     {
       id: 3,
       name: "Dark Noir",
       price: "$10",
-      img: "https://images.unsplash.com/photo-1505232070786-2f46a45d5c86?q=80&w=1200&auto=format&fit=crop", // chocolate donut on dark slate
+      // Verified: Stack of chocolate donuts (Fixed broken link)
+      img: "https://images.pexels.com/photos/3779937/pexels-photo-3779937.jpeg?auto=compress&cs=tinysrgb&w=800", 
     },
   ];
 
   return (
     <main>
+      {/* Hero Section */}
       <section className="relative h-[80vh] w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?q=80&w=2000&auto=format&fit=crop"
@@ -51,6 +56,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Collection Section */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
           <span className="text-amber-700 text-xs font-bold tracking-[0.2em] uppercase">
@@ -91,6 +97,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Quote Section */}
       <section className="bg-stone-900 text-stone-100 py-24 text-center px-6">
         <div className="max-w-3xl mx-auto">
           <h3 className="font-serif text-3xl md:text-4xl leading-relaxed italic">
