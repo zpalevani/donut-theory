@@ -7,7 +7,7 @@ const nextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" },
     ],
   },
-  basePath: "/donut-theory",
+  // basePath will be automatically set by GitHub Actions
 };
 
 export default nextConfig;
