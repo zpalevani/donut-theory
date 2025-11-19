@@ -69,7 +69,11 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {donuts.map((donut) => (
-            <div key={donut.id} className="group cursor-pointer">
+            <Link
+              key={donut.id}
+              href={`/products/${donut.id}`}
+              className="group cursor-pointer block"
+            >
               <div className="relative h-96 w-full overflow-hidden bg-stone-200">
                 <Image
                   src={donut.img}
@@ -92,7 +96,7 @@ export default function Home() {
                   {donut.price}
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
