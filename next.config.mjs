@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  basePath: process.env.NODE_ENV === "production" ? "/donut-theory" : "",
   images: {
     unoptimized: true,
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
     ],
   },
-  // basePath will be automatically set by GitHub Actions
 };
 
 export default nextConfig;
